@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+        rel="stylesheet"
+    />
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+
+    <script src="enabler.js" defer></script> 
+
+    <style>
+
+
+
+        .button-container .btn {
+            width: 150px; 
+        }
+
+        .rainbow {
+
+            background: linear-gradient(to right, #FFB6C1, #ADD8E6, #FFFFE0, #98FB98, #FFDAB9);
+        }
+
+        header {
+
+            width: 100%;
+            padding: 1em;
+            padding-bottom: 2em;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <header class="rainbow">
+        <h1 class="text-center">My Game Library</h1>
+        <nav class="navbar navbar-expand-md navbar-light bg-light"> 
+            <div class="container">
+                <a class="navbar-brand" href="#" >
+                    <i class="bi bi-terminal-fill"></i>
+                </a> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" >
+                    <span class="navbar-toggler-icon"></span> 
+                </button> 
+
+                <div class="collapse navbar-collapse" id="navMenu"> 
+                    <ul class="navbar-nav mx-5"> 
+                        <li class="nav-item"> 
+                        <a class="nav-link active" href="index.html">Home</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                        <a class="nav-link" href="#">Page</a> 
+                        </li> 
+                        <li class="nav-item"> 
+                        <a class="nav-link" href="#">Page</a> 
+                        </li> 
+                    </ul> 
+
+                    <!-- ms-auto to align to the right -->
+                    <form class="d-flex ms-auto"> 
+                        <input class="form-control me-2" type="search" placeholder="Search (WIP)"/> 
+                        <button class="btn btn-outline-success" type="submit" id="look_for">
+                            Search
+                        </button> 
+                    </form> 
+                </div> 
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid" style="padding-top: 1em; margin-bottom: 2em;"> 
+        <div class="row">
+            <!-- progress bars --> 
+            <div class="col-sm-12 col-md-3 button-container bg-light" style="margin-bottom: 1em; padding-bottom: 1em;">
+
+                <!-- Modal -- mx-auto to align nicer -->
+                <button type="button" class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#reflectionsModal"
+                        style="margin: 1.5em; background-color: #ADD8E6; color: black; font-weight: bold;"> 
+                    About Me
+                </button>
+
+                <!-- Modal Info -->
+                <div class="modal fade" 
+                    id="reflectionsModal" 
+                    tabindex="-1" 
+                    aria-labelledby="reflectionsModalLabel"
+                    aria-hidden="true"> 
+                    <div class="modal-dialog"> 
+                        <div class="modal-content"> 
+                                <div class="modal-header"> 
+                                    <h5 class="modal-title" 
+                                    id="reflectionsModalLabel"> 
+                                        About Me 
+                                    </h5> 
+                                    <button type="button" 
+                                            class="btn-close" 
+                                            data-bs-dismiss="modal" 
+                                            aria-label="Close"> 
+                                    </button>
+                                </div> 
+                                <div class="modal-body"> 
+                                    
+                                    <p>I always loved gaming since I was little.</p>
+                                    <p>This webpage showcases a few games I loved playing over my time as a gamer. The games include a wide variety of genres.</p>
+                                </div> 
+                                <div class="modal-footer"> 
+                                    <button type="button" 
+                                        class="btn btn-secondary" 
+                                        data-bs-dismiss="modal"> 
+                                        Okay! 
+                                    </button> 
+                                </div> 
+                            </div> 
+                            </div> 
+                </div>
+
+                <!-- progress bars *new!!!* -->
+                 <!-- I thought it would be neat to have little progression bars for the games I play -->
+                <h5>Game Progress</h5>
+
+                <span>Wizard101 (World Completion)</span>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div>
+                </div>
+
+                <span>Warframe (Mastery Rank)</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">83%</div>
+                </div>
+
+                <span>Dungeon Defenders 2</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 64%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">64%</div>
+                </div>
+
+                <span>Terraria</span>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 84%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">84%</div>
+                </div>
+
+                <span>Stardew Valley</span>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">35%</div>
+                </div>
+
+            </div> 
+            <!-- end side buttons--> 
+
+            <!-- carousel area -->
+            <div class="col col-sm-10 col-md-4 carousel-area bg-body bg-gradient">
+
+                <div id="course_carousel"
+                    class="carousel carousel-light" 
+                    data-bs-ride="carousel" 
+                    data-bs-interval="3500">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active"> 
+                            <img                   
+                                class="d-block w-100"             
+                                src="./assets/wizard101.jpg"
+                                alt="Wizard101 Logo"
+                            /> 
+                            <div class="carousel-caption"> 
+                            </div> 
+                        </div> 
+
+                        <div class="carousel-item"> 
+                            <img                   
+                                class="d-block w-100"             
+                                src="./assets/warframe.png"
+                                alt="Warframe Logo"
+                            /> 
+                            <div class="carousel-caption"> 
+                            </div> 
+                        </div>
+
+                        <div class="carousel-item"> 
+                            <img                   
+                                class="d-block w-100"             
+                                src="./assets/dd2.png"
+                                alt="Dungeon Defenders 2 Logo"
+                            /> 
+                            <div class="carousel-caption"> 
+                            </div> 
+                        </div>
+
+                        <div class="carousel-item"> 
+                            <img                   
+                                class="d-block w-100"             
+                                src="./assets/terraria.png"
+                                alt="Terraria Logo"
+                            /> 
+                            <div class="carousel-caption"> 
+                            </div> 
+                        </div>
+
+                        <div class="carousel-item"> 
+                            <img                   
+                                class="d-block w-100"             
+                                src="./assets/sdv.jpg"
+                                alt="Stardew Valley Logo"
+                            /> 
+                            <div class="carousel-caption"> 
+                            </div> 
+                        </div>
+
+                    </div>
+
+                    <button   
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#course_carousel"
+                        data-bs-slide="prev">
+                        <span 
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"> 
+                        </span>    
+                        <span class="visually-hidden"> 
+                            Previous 
+                        </span> 
+                    </button> 
+
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#course_carousel"
+                        data-bs-slide="next">               
+                        <span 
+                            class="carousel-control-next-icon"
+                            aria-hidden="true">
+                        </span> 
+                        <span class="visually-hidden">
+                            Next
+                        </span> 
+                    </button> 
+
+                    <div class="carousel-indicators">  
+                        <button 
+                            type="button"
+                            data-bs-target="#course-carousel"
+                            data-bs-slide-to="0"
+                            class="active">
+                        </button>           
+                        <button
+                            type="button" 
+                            data-bs-target="#course-carousel"
+                            data-bs-slide-to="1">
+                        </button>
+                        <button
+                            type="button" 
+                            data-bs-target="#course-carousel"
+                            data-bs-slide-to="2">
+                        </button> 
+                        <button
+                            type="button" 
+                            data-bs-target="#course-carousel"
+                            data-bs-slide-to="3">
+                        </button>
+                        <button
+                            type="button" 
+                            data-bs-target="#course-carousel"
+                            data-bs-slide-to="4">
+                        </button>
+                    </div> 
+                </div> 
+
+                <!-- tooltip area -->
+                <div class="tooltip-area" style="margin-top: 2em;">
+                    <div> 
+                        <span 
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="right" 
+                            title="Stardew Valley Junimo Gif"> 
+                            <img
+                                class="d-block w-100"
+                                src="https://gifdb.com/images/high/stardew-valley-purple-junimo-h93oozhv8ebospi2.gif" 
+                                alt="Stardew Valley Junimo Gif"/> 
+                        </span> 
+                        <form> 
+                            <label for="e-mail" class="form-label">Sign Up for My Newsletter to Get the Latest Updates on the Games I Make or Play!</label> 
+                            <div class="mb-4 input-group"> 
+                                <span class="input-group-text"> 
+                                    <i class="bi bi-envelope-fill"></i> 
+                                    </span> 
+                                    <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    id="email" 
+                                    placeholder="your_email@example.com"/> 
+                                    <span 
+                                    class="input-group-text text-muted" 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="top" 
+                                    title="enter your e-mail"> 
+                                    <i class="bi bi-question-circle"></i> 
+                                </span>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="background-color: #ADD8E6; font-weight: bold; color: black;">Submit</button> 
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- accordion area -->
+            <div class="col col-sm-12 col-lg-4 accordion-area bg-light" style="padding-top: 1em;"> 
+                <div class="accordion" id="accordionRecipes"> 
+
+                    <!-- Wizard101 -->
+                    <div class="accordion-item"> 
+                        <h2 class="accordion-header" id="headingOne"> 
+                            <button 
+                            class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseOne" 
+                            aria-expanded="true" 
+                            aria-controls="collapseOne"> 
+                            Wizard101
+                            </button> 
+                        </h2> 
+                        <div 
+                            id="collapseOne" 
+                            class="accordion-collapse collapse show" 
+                            aria-labelledby="Chicken Marsala" 
+                            data-bs-parent="#accordionRecipes"> 
+                            <div class="accordion-body">
+
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Rated 5 Stars - Amazing Storyline and Gameplay">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <br>
+                                </span>
+
+                                The forces of evil are gathering, and former professor of Death Magic, Malistaire Drake, has marshaled flights of ghosts, floats of Kroks, and herds of Helephants to create chaos in the worlds of the Spiral.<br><br>
+                                Merle Ambrose and the faculty of the Ravenwood School of Magical Arts have stood to challenge Malistaire and his evil. But they need the help of student Wizards like you who are willing to learn the ways of magic and use it for good.<br><br>
+                                Will you come to Wizard City and challenge this threat in our virtual Wizard game?
+
+                                <br><br>
+                                <!-- https://tse4.mm.bing.net/th/id/OIP.T07Rui_mFWSl3g9FAIGQxAHaD_?rs=1&pid=ImgDetMain&o=7&rm=3 -->
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Khrysalis World in Wizard101">
+                                    <img                   
+                                        class="d-block w-100"             
+                                        src="./assets/game_image_sample/khrysalis.png"
+                                        alt="Khrysalis World Wizard101"
+                                    />
+                                </span>
+                                
+
+                                <!-- did you know button -->
+                                <button class="btn btn-md btn-primary d-block m-4" 
+                                    data-bs-container="body"
+                                    data-bs-toggle="popover"
+                                    data-bs-placement="right"
+                                    title="Game Release"
+                                    data-bs-content="Wizard101 was released on Sep 2nd, 2008 and is still alive and receiving updates today!">
+                                    <span><i class="bi bi-exclamation-circle"></i></span>
+                                    <span style="margin-left: 10px">Did You Know</span>
+                                </button>
+
+                            </div> 
+                        </div> 
+                    </div>
+
+                    <!-- Warframe -->
+                    <div class="accordion-item collapsed"> 
+                        <h2 class="accordion-header" id="headingTwo"> 
+                            <button 
+                            class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseTwo" 
+                            aria-expanded="false" 
+                            aria-controls="collapseTwo"> 
+                            Warframe
+                            </button> 
+                        </h2> 
+                        <div 
+                            id="collapseTwo" 
+                            class="accordion-collapse collapse" 
+                            aria-labelledby="Chicken Marsala" 
+                            data-bs-parent="#accordionRecipes"> 
+                            <div class="accordion-body">
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Rated 5 Stars - Amazing Storyline and Gameplay">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <br>
+                                </span>
+
+                                Awaken as an unstoppable warrior and battle alongside your friends in this story-driven free-to-play online action game! 
+
+                                <br><br>
+                                <!-- https://www.shacknews.com/article/141599/all-koumei-abilities-warframe -->
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Warframe Character Koumei">
+                                    <img                   
+                                        class="d-block w-100"             
+                                        src="./assets/game_image_sample/koumei.jpg"
+                                        alt="Warframe Koumei"
+                                    />
+                                </span>
+
+                                <!-- did you know button -->
+                                <button class="btn btn-md btn-primary d-block m-4" 
+                                    data-bs-container="body"
+                                    data-bs-toggle="popover"
+                                    data-bs-placement="right"
+                                    title="Early Development"
+                                    data-bs-content="Many critics thought Warframe was going to shut down within the year it was released. The game now has it's own con called 'Tennocon' and is incredibly successful!">
+                                    <span><i class="bi bi-exclamation-circle"></i></span>
+                                    <span style="margin-left: 10px">Did You Know</span>
+                                </button>
+                            </div> 
+                        </div> 
+                    </div>
+
+                    <!-- DD2 -->
+                    <div class="accordion-item collapsed"> 
+                        <h2 class="accordion-header" id="headingThree"> 
+                            <button 
+                            class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseThree" 
+                            aria-expanded="false" 
+                            aria-controls="collapseThree"> 
+                            Dungeon Defenders 2
+                            </button> 
+                        </h2> 
+                        <div 
+                            id="collapseThree" 
+                            class="accordion-collapse collapse" 
+                            aria-labelledby="Chicken Marsala" 
+                            data-bs-parent="#accordionRecipes"> 
+                            <div class="accordion-body">
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Rated 5 Stars - Fun Character and Fun Game Loop">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <br>
+                                </span>
+
+                                Dungeon Defenders II is a cooperative Action Tower Defense game packed with roleplaying elements like loot, leveling, and pets.
+
+                                <br><br>
+                                <!-- https://gametyrant.com/news/impressions-dungeon-defenders-ii -->
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Dungeon Defenders 2 Starter Heros">
+                                    <img                   
+                                        class="d-block w-100"             
+                                        src="./assets/game_image_sample/dd2_starter_heros.jpg"
+                                        alt="Dungeon Defenders 2 Starter Heros"
+                                    />
+                                </span>
+
+                                <!-- did you know button -->
+                                <button class="btn btn-md btn-primary d-block m-4" 
+                                    data-bs-container="body"
+                                    data-bs-toggle="popover"
+                                    data-bs-placement="right"
+                                    title="Peak Players"
+                                    data-bs-content="Dungeon Defenders 2 once had a peak player count of 18,785 players! Today, the game averages around 200-300 players concurrently.">
+                                    <span><i class="bi bi-exclamation-circle"></i></span>
+                                    <span style="margin-left: 10px">Did You Know</span>
+                                </button>
+                            </div> 
+                        </div> 
+                    </div>
+
+                    <!-- Terraria -->
+                    <div class="accordion-item collapsed"> 
+                        <h2 class="accordion-header" id="headingFour"> 
+                            <button 
+                            class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFour" 
+                            aria-expanded="false" 
+                            aria-controls="collapseFour"> 
+                            Terraria
+                            </button> 
+                        </h2> 
+                        <div 
+                            id="collapseFour" 
+                            class="accordion-collapse collapse" 
+                            aria-labelledby="Chicken Marsala" 
+                            data-bs-parent="#accordionRecipes"> 
+                            <div class="accordion-body"> 
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Rated 5 Stars - Incredible Exploration and Survival Game with Lots of Replayablity">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <br>
+                                </span>
+
+                                Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game.
+
+                                <br><br>
+                                <!-- https://www.pcgamer.com/huge-terraria-update-adds-new-legendary-difficulty-hundreds-of-content-and-qol-changes/ -->
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Cute Terraria Build and NPCs">
+                                    <img                   
+                                        class="d-block w-100"             
+                                        src="./assets/game_image_sample/terraria_build.gif"
+                                        alt="Cute Terraria Build and NPCs"
+                                    />
+                                </span>
+
+                                <!-- did you know button -->
+                                <button class="btn btn-md btn-primary d-block m-4" 
+                                    data-bs-container="body"
+                                    data-bs-toggle="popover"
+                                    data-bs-placement="right"
+                                    title="Success"
+                                    data-bs-content="Terraria, released on May 16th, 2011 still receives regular updates today! The game has over 1.52 million reviews with 96.74% of them being positive! The developers continuously note that each update is the game's 'Final' Update, but this has not been the case for the past several years!">
+                                    <span><i class="bi bi-exclamation-circle"></i></span>
+                                    <span style="margin-left: 10px">Did You Know</span>
+                                </button>
+
+                            </div> 
+                        </div> 
+                    </div>
+
+                    <!-- Stardew Valley -->
+                    <div class="accordion-item collapsed"> 
+                        <h2 class="accordion-header" id="headingFive"> 
+                            <button 
+                            class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFive" 
+                            aria-expanded="false" 
+                            aria-controls="collapseFive"> 
+                            Stardew Valley
+                            </button> 
+                        </h2> 
+                        <div 
+                            id="collapseFive" 
+                            class="accordion-collapse collapse" 
+                            aria-labelledby="Chicken Marsala" 
+                            data-bs-parent="#accordionRecipes"> 
+                            <div class="accordion-body">
+
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Rated 5 Stars - Fantastic Cozy Farming Simulator">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <br>
+                                </span>
+
+                                You've inherited your grandfather's old farm plot in Stardew Valley.<br><br>
+                                Armed with hand-me-down tools and a few coins, you set out to begin your new life.<br><br>
+                                Can you learn to live off the land and turn these overgrown fields into a thriving home?
+
+                                <br><br>
+                                <!-- https://www.pinterest.com/ideas/stardew-valley-gif-aesthetic/947385779981/ -->
+                                <span 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" 
+                                    title="Stardew Valley Farm in Rainy Weather">
+                                    <img                   
+                                        class="d-block w-100"             
+                                        src="./assets/game_image_sample/stardew_farm_raining.gif"
+                                        alt="Stardew Valley Farm in Rainy Weather"
+                                    />
+                                </span>
+
+                                <!-- did you know button -->
+                                <button class="btn btn-md btn-primary d-block m-4" 
+                                    data-bs-container="body"
+                                    data-bs-toggle="popover"
+                                    data-bs-placement="right"
+                                    title="Development"
+                                    data-bs-content="Stardew Valley was originally made by one singular person. The game still receives slow, but meaningful updates. THe game has over 983,000 reviews with 98.5% of them being positive on Steam.">
+                                    <span><i class="bi bi-exclamation-circle"></i></span>
+                                    <span style="margin-left: 10px">Did You Know</span>
+                                </button>
+                            </div> 
+                        </div> 
+                    </div>
+
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
